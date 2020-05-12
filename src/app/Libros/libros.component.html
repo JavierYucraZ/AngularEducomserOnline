@@ -1,0 +1,42 @@
+<!-- Enlace de datos -->
+<!-- <label for="pais">Pais</label>
+<div class="form-group">
+    <input 
+    type="text" 
+    id="pais" 
+    placeholder="Ingrese el pais" 
+    class="form-control"
+    (input)="modificarLibro($event)">
+</div>
+<p class="lead">
+    {{ paisLibro }}
+</p> -->
+<!-- Doble enlace de datos -->
+<label for="pais">Pais</label>
+<div class="form-group">
+    <input 
+    type="text"
+    id="pais"
+    placeholder="Ingrese el pais"
+    class="form-control"
+    [(ngModel)]="paisLibro">
+</div>
+<p class="lead">
+    {{ paisLibro }}
+</p>
+<button class="btn btn-info mb-2" [disabled]="!boton" (click)="crearLibro()">
+    Agregar Libro
+</button>
+<!-- <p>
+    {{ mensaje }}
+</p> -->
+
+<p class="lead" *ngIf="libroCreado; else sinLibro">
+    {{ mensaje }} 
+</p>
+
+<ng-template #sinLibro>
+    <p class="lead">
+        No se agrego ningun libro
+    </p>    
+</ng-template>

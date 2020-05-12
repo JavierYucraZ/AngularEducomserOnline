@@ -1,0 +1,38 @@
+<h1>
+    {{ h1 }}
+</h1>
+
+<form class="form-row border rounded mb-3 p-2">
+    <div class="form-group col-6">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ingrese el titulo" class="form-control"
+        [(ngModel)]="tituloInput">
+    </div>
+    <div class="form-group col-6">
+        <label for="genero">Genero</label>
+        <input type="text" id="genero" name="genero" placeholder="Ingrese el genero" class="form-control"
+        [(ngModel)]="generoInput">
+    </div>
+    <button type="submit" class="btn btn-info btn-block" (click)="agregarLibro()">
+        Agregar
+    </button>
+</form>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Genero</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let libro of libros; let id = index">
+                   <td> {{ id+1 }} </td>
+                   <td> {{ libro.titulo }} </td>
+                   <td> {{ libro.genero }} </td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
