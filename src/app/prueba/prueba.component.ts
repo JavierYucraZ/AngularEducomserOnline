@@ -12,6 +12,7 @@ export class PruebaComponent implements OnInit {
   libros : Libro[] = [new Libro('El señor de los anillos', 'literatura fantastica'), 
                       new Libro('Las cronicas de narnia', 'literatura fantastica')]
 
+
   tituloInput : string
   generoInput : string
 

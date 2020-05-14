@@ -1,0 +1,40 @@
+<form class="form-row border rounded mb-3 p-2">
+    <!-- Utilizando el concepto de TWo Way Data Binding
+        <div class="form-group col-6">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ingrese el titulo" class="form-control"
+        [(ngModel)]="tituloInput">
+    </div>
+    <div class="form-group col-6">
+        <label for="genero">Genero</label>
+        <input type="text" id="genero" name="genero" placeholder="Ingrese el genero" class="form-control"
+        [(ngModel)]="generoInput">
+    </div> -->
+
+    <!-- Usando Referencias locales 
+        <div class="form-group col-6">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ingrese el titulo" class="form-control"
+        #tituloInput>
+    </div>
+    <div class="form-group col-6">
+        <label for="genero">Genero</label>
+        <input type="text" id="genero" name="genero" placeholder="Ingrese el genero" class="form-control"
+        #generoInput>
+    </div> -->
+
+    <div class="form-group col-6">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ingrese el titulo" class="form-control"
+        #tituloInput>
+    </div>
+    <div class="form-group col-6">
+        <label for="genero">Genero</label>
+        <input type="text" id="genero" name="genero" placeholder="Ingrese el genero" class="form-control"
+        #generoInput>
+    </div>
+
+    <button type="submit" class="btn btn-info btn-block" (click)="agregarLibro()">
+        Agregar
+    </button>
+</form>

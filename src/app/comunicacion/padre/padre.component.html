@@ -1,0 +1,12 @@
+<h1>
+    {{ h1 }}
+</h1>
+
+<app-formulario>    
+</app-formulario>
+
+<app-hijo 
+*ngFor="let libroElemento of libros; let i = index"
+[libro]="libroElemento"
+[indice]="i"> 
+</app-hijo>
